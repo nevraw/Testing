@@ -23,23 +23,36 @@ function buttonHandler() {
  });
 }
 
-
 function loadOptions() {
- var $timeColorPicker = $('#timeColorPicker');
+ var $hourColorPicker = $('#hourColorPicker');
+ var $min5ColorPicker = $('#min5ColorPicker');
+ var $minColorPicker = $('#minColorPicker');
 
- if (localStorage.timeColor) {
-  $timeColorPicker[0].value = localStorage.timeColor;
+ if (localStorage.hourColor) {
+  $hourColorPicker[0].value = localStorage.hourColor;
+ }
+ if (localStorage.min5Color) {
+  $min5ColorPicker[0].value = localStorage.min5Color;
+ }
+ if (localStorage.minColor) {
+  $minColorPicker[0].value = localStorage.minColor;
  }
 } 
 
 function getAndStoreConfigData() {
- var $timeColorPicker = $('#timeColorPicker');
+ var $hourColorPicker = $('#hourColorPicker');
+ var $min5ColorPicker = $('#min5ColorPicker');
+ var $minColorPicker = $('#minColorPicker');
 
  var options = {
-  timeColor: $timeColorPicker.val()
+  hourColor: $hourColorPicker.val(),
+  min5Color: $min5ColorPicker.val(),
+  minColor: $minColorPicker.val()
  };
  
- localStorage.timeColor = options.timeColor;
+ localStorage.hourColor = options.hourColor;
+ localStorage.min5Color = options.min5Color;
+ localStorage.minColor = options.minColor;
 
  console.log('Got options: ' + JSON.stringify(options));
  return options;
