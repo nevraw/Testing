@@ -7,28 +7,33 @@
  <link rel='stylesheet' type='text/css' href='style_test.css'>
 
 
-        <script language="javascript">
-            var x = 0;
-            function hola(x) {
-                if(x == 0) {
-                    document.getElementById("cont1").style.visibility="hidden";
-                    document.getElementById("cont2").style.visibility="hidden";
-                }
-                if(x == 1) {
-                    document.getElementById("cont1").style.visibility="visible";
-                    document.getElementById("cont2").style.visibility="hidden"; 
-                }
-                if(x == 2)  {
-                    document.getElementById("cont1").style.visibility="hidden";
-                    document.getElementById("cont2").style.visibility="visible"; 
-                }
-            }
-        </script>
+ <script language="javascript">
+  var x = 0;
+  function hola(x) {
+   if(x == 0) {
+    document.getElementById("cont1").style.visibility="hidden";
+    document.getElementById("cont2").style.visibility="hidden";
+   }
+   if(x == 1) {
+    document.getElementById("cont1").style.visibility="visible";
+    document.getElementById("cont2").style.visibility="hidden"; 
+   }
+   if(x == 2)  {
+    document.getElementById("cont1").style.visibility="hidden";
+    document.getElementById("cont2").style.visibility="visible"; 
+   }
+  }
+  function hideBoth()  
+  {  
+   document.getElementById("cont1").style.visibility="hidden";  
+   document.getElementById("cont2").style.visibility="hidden" ;   
+  }
+ </script>
 
 
 
 </head>
-<body>
+<body onload='hideBoth()'>
  <div class='item-container'>
   <h1 class='title'>Quadrant Hybrid Watchface<br>Configuration Page</h1>
  </div>
