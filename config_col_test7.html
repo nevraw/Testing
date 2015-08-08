@@ -61,7 +61,6 @@
   }
     function showBoth()  
   {  
-    alert("showing both");
     document.getElementById("cont1").style.visibility="visible";
     document.getElementById("cont1").style.display="block";
     document.getElementById("cont2").style.visibility="visible"; 
@@ -89,7 +88,7 @@
        Choose individual colors
        <label class='item'>
         Hour Color
-        <input id='hourColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
+        <input id='hourColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF' on-click='validatePreset()'>
        </label>  
        <label class='item'>
         5-minute Color
