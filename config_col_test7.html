@@ -9,6 +9,10 @@
  <script language="javascript">
   var x = 0;
 
+  function check(element) {
+   alert("getting called");
+  }
+  
   function validatePreset(){
    alert("validatePreset() called");
   }
@@ -81,14 +85,14 @@
       <div id="cont1" class='item-container-content'>
        <label class='item'>
         Pre-set number 1 
-        <input id='preset' type='checkbox' value=1 class='item-checkbox' on-click='validatePreset();'>
+        <input id='preset' type='checkbox' value=1 class='item-checkbox' on-click='check(this.preset);'>
        </label>
       </div>
       <div id="cont2" class='item-container-content'>
        Choose individual colors
        <label class='item'>
         Hour Color
-        <input id='hourColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF' on-click='validatePreset()'>
+        <input id='hourColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
        </label>  
        <label class='item'>
         5-minute Color
