@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Settings test</title>
+ <link rel='stylesheet' type='text/css' href='slate.min.css'>
+ <link rel='stylesheet' type='text/css' href='style.css'>
+
+ <script language="javascript">
+  var x = 0;
+  function hola(x) {
+   if(x == 0) {
+    document.getElementById("cont1").style.visibility="hidden";
+    document.getElementById("cont1").style.display="none";
+    document.getElementById("cont2").style.visibility="hidden";
+    document.getElementById("cont2").style.display="none";
+   }
+   if(x == 1) {
+    document.getElementById("cont1").style.visibility="visible";
+    document.getElementById("cont1").style.display="block";
+    document.getElementById("cont2").style.visibility="hidden"; 
+    document.getElementById("cont2").style.display="none";
+   }
+   if(x == 2)  {
+    document.getElementById("cont1").style.visibility="hidden";
+    document.getElementById("cont1").style.display="none";
+    document.getElementById("cont2").style.visibility="visible"; 
+    document.getElementById("cont2").style.display="block";
+   }
+  }
+  function hideBoth()  
+  {  
+    document.getElementById("cont1").style.visibility="hidden";
+    document.getElementById("cont1").style.display="none";
+    document.getElementById("cont2").style.visibility="hidden";
+    document.getElementById("cont2").style.display="none";
+  }
+ </script>
+
+</head>
+<body onload='hideBoth()'>
+ <div class='item-container'>
+  <h1 class='title'>Watchface<br>Configuration Page</h1>
+ </div>
+ 
+  <div class='item-container'>
+    <label class='item-container'>
+      Pre-sets or color selection?<br>
+       <input type="button" onclick="hola(1)" value="Pre-sets" id="boton1">
+        <div class='item-container'>
+          <div id="cont1" class='item-container-content'>
+           <label class='item'>
+            Pre-set number 1 (non-standard config)
+            <input id='preset1' type="checkbox" class='item-checkbox'>
+           </label>
+          </div>
+        </div>  
+       <input type="button" onclick="hola(2)" value="Color selection" id="boton2">
+        <div class='item-container'>
+         <div id="cont2" class='item-container-content'>
+          Choose individual colors
+          <label class='item'>
+           Hour Color
+           <input id='hourColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
+          </label>  
+          <label class='item'>
+           5-minute Color
+           <input id='min5ColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
+          </label>
+          <label class='item'>
+           Single minute Color
+           <input id='minColorPicker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
+          </label>
+         </div>
+        </div>
+    </label>
+  </div>
+
+  <div class='item-container-footer'>
+    Settings only change on the watch after you click save.
+  </div>
+ </div>
+
+ <div class='item-container'>
+  <div class='button-container'>
+    <input id='submitButton' type='button' class='item-button' value='SUBMIT'>
+ </div>
+ </div>
+
+ <div class='item-container'>
+  <div class='button-container'>
+    <input id='cancelButton' type='button' class='item-button' value='CANCEL'>
+  </div>
+ </div>
+
+ <script src='slate_reduced.min.js'></script>
+ <script src='main_col_test.js'></script>
+</body>
+</html>
