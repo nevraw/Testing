@@ -43,36 +43,6 @@ function loadOptions() {
  }
 } 
 
-var x = 0;
-function hola(x) {
- if(x == 0) {
-  document.getElementById("cont1").style.visibility="hidden";
-  document.getElementById("cont1").style.display="none";
-  document.getElementById("cont2").style.visibility="hidden";
-  document.getElementById("cont2").style.display="none";
- }
- if(x == 1) {
-  document.getElementById("cont1").style.visibility="visible";
-  document.getElementById("cont1").style.display="block";
-  document.getElementById("cont2").style.visibility="hidden"; 
-  document.getElementById("cont2").style.display="none";
- }
- if(x == 2)  {
-  document.getElementById("cont1").style.visibility="hidden";
-  document.getElementById("cont1").style.display="none";
-  document.getElementById("cont2").style.visibility="visible"; 
-  document.getElementById("cont2").style.display="block";
- }
-}
-function hideBoth()  
-{  
-  document.getElementById("cont1").style.visibility="hidden";
-  document.getElementById("cont1").style.display="none";
-  document.getElementById("cont2").style.visibility="hidden";
-  document.getElementById("cont2").style.display="none";
-}
-
-
 function getAndStoreConfigData() {
  var $hourColorPicker = $('#hourColorPicker');
  var $min5ColorPicker = $('#min5ColorPicker');
