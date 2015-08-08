@@ -10,9 +10,12 @@
   var x = 0;
 
   function validatePreset(x){
+   alert("validatePreset() called");
+   console.log(1);
    console.log("validatePreset() called");
-//   var presetCheck = document.getElementById('preset('+x+'');
+ //   var presetCheck = document.getElementById('preset('+x+'');
    var presetCheck = document.getElementById("cont1.preset");
+   alert ("The checkBox is " + presetCheck);
    console.log(" presetCheck.checked = %d", presetCheck.checked);
    if (presetCheck.checked){
     console.log(" hiding");
