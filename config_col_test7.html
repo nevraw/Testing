@@ -52,11 +52,18 @@
     document.getElementById("cont2").style.visibility="hidden";
     document.getElementById("cont2").style.display="none";
   }
+    function showBoth()  
+  {  
+    document.getElementById("cont1").style.visibility="visible";
+    document.getElementById("cont1").style.display="block";
+    document.getElementById("cont2").style.visibility="visible"; 
+    document.getElementById("cont2").style.display="block";
+  }
  </script>
 
 </head>
-//<body onload='hideBoth()'>
-<body>
+
+<body onload='showBoth()'>
  <div class='item-container'>
   <h1 class='title'>Watchface<br>Configuration Page</h1>
  </div>
