@@ -12,16 +12,16 @@
   function validatePreset(x){
    console.log("validatePreset() called");
 //   var presetCheck = document.getElementById('preset('+x+'');
-   var presetCheck = document.getElementById('preset');
+   var presetCheck = document.getElementById("cont1.preset");
    console.log(" presetCheck.checked = %d", presetCheck.checked);
    if (presetCheck.checked){
     console.log(" hiding");
-    document.getElementById("cont1").style.visibility="hidden";
-    document.getElementById("cont1").style.display="none";
+    document.getElementById("cont2").style.visibility="hidden";
+    document.getElementById("cont2").style.display="none";
    } else {
     console.log(" showing");
-    document.getElementById("cont1").style.visibility="visible";
-    document.getElementById("cont1").style.display="block";
+    document.getElementById("cont2").style.visibility="visible";
+    document.getElementById("cont2").style.display="block";
    }
   }
 
@@ -64,13 +64,13 @@
   <div class='item-container'>
     <label class='item-container'>
       Pre-sets (untick for color selection)
-      <div class='item-container-content'>
+      <div id="cont1" class='item-container-content'>
        <label class='item'>
         Pre-set number 1 
         <input id='preset' type="checkbox" value=1 class='item-checkbox' on-click="validatePreset(1)">
        </label>
       </div>
-      <div id="cont1" class='item-container-content'>
+      <div id="cont2" class='item-container-content'>
        Choose individual colors
        <label class='item'>
         Hour Color
