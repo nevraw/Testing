@@ -27,7 +27,7 @@ function loadOptions() {
  var $hourColorPicker = $('#hourColorPicker');
  var $min5ColorPicker = $('#min5ColorPicker');
  var $minColorPicker = $('#minColorPicker');
- var $preset = $('#preset');
+// var $preset = $('#preset');
 
  if (localStorage.hourColor) {
   $hourColorPicker[0].value = localStorage.hourColor;
@@ -38,32 +38,32 @@ function loadOptions() {
  if (localStorage.minColor) {
   $minColorPicker[0].value = localStorage.minColor;
  }
- if (localStorage.preset) {
-  $preset = localStorage.preset;
- }
+// if (localStorage.preset) {
+//  $preset = localStorage.preset;
+// }
 } 
 
 function getAndStoreConfigData() {
  var $hourColorPicker = $('#hourColorPicker');
  var $min5ColorPicker = $('#min5ColorPicker');
  var $minColorPicker = $('#minColorPicker');
- var $preset = $('#preset');
+// var $preset = $('#preset');
 
- if ($preset != 1 && $preset != 2) {
-  $preset = 0;
- }
+// if ($preset != 1 && $preset != 2) {
+//  $preset = 0;
+// }
 
  var options = {
   hourColor: $hourColorPicker.val(),
   min5Color: $min5ColorPicker.val(),
   minColor: $minColorPicker.val(),
-  preset:  $preset;
+//  preset:  $preset;
  };
  
  localStorage.hourColor = options.hourColor;
  localStorage.min5Color = options.min5Color;
  localStorage.minColor = options.minColor;
- localStorage.preset = options.preset;
+// localStorage.preset = options.preset;
 
  console.log('Got options: ' + JSON.stringify(options));
  return options;
