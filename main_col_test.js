@@ -47,11 +47,15 @@ function getAndStoreConfigData() {
  var $hourColorPicker = $('#hourColorPicker');
  var $min5ColorPicker = $('#min5ColorPicker');
  var $minColorPicker = $('#minColorPicker');
-// var $preset = $('#preset');
+ var $presetCheckbox = $('#presetCheckbox');
 
-// if ($preset != 1 && $preset != 2) {
-//  $preset = 0;
-// }
+ var options = {
+  invert: $invertCheckbox[0].checked
+ };
+ 
+ localStorage.invert = options.invert;
+ 
+ console.log('Got options: ' + JSON.stringify(options));
 
  var options = {
   hourColor: $hourColorPicker.val(),
