@@ -10,12 +10,16 @@
   var x = 0;
 
   function validatePreset(x){
+   console.log("validatePreset() called");
 //   var presetCheck = document.getElementById('preset('+x+'');
    var presetCheck = document.getElementById('preset');
+   console.log(" presetCheck.checked = %d", presetCheck.checked);
    if (presetCheck.checked){
+    console.log(" hiding");
     document.getElementById("cont1").style.visibility="hidden";
     document.getElementById("cont1").style.display="none";
    } else {
+    console.log(" showing");
     document.getElementById("cont1").style.visibility="visible";
     document.getElementById("cont1").style.display="block";
    }
