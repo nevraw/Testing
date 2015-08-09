@@ -7,6 +7,9 @@
  color: #888888;
  text-align: center;
 }
+.val {
+   vertical-align: middle;
+}
 .conditional_form_part {
   display: block;
 }
