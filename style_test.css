@@ -8,7 +8,7 @@
  text-align: center;
 }
 .nevval {
-   vertical-align: middle;
+   vertical-align: text-top;
 }
 .conditional_form_part {
   display: block;
