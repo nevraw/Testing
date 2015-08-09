@@ -7,9 +7,13 @@
  color: #888888;
  text-align: center;
 }
-.nevval {
-   vertical-align: text-top;
-}
+.modified_item {
+  position: relative;
+  vertical-align: text-top;
+  padding: 10px;
+  display: block;
+  overflow: hidden; }
+
 .conditional_form_part {
   display: block;
 }
