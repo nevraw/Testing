@@ -9,7 +9,8 @@
 }
 .modified_item {
   position: relative;
-  vertical-align: text-top;
+  top:50%;
+  margin-top:-50px;
   padding: 10px;
   display: block;
   overflow: hidden; }
